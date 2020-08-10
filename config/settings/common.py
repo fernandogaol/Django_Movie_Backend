@@ -23,6 +23,12 @@ DJANGO_APPS = (
     'django.contrib.staticfiles',
     'moviesapp',
     'corsheaders',
+    'allauth.socialaccount',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
+    'rest_framework.authtoken',
+    'rest_auth',
 
     # Useful template tags:
     # 'django.contrib.humanize',
@@ -30,6 +36,7 @@ DJANGO_APPS = (
     # Admin
     'django.contrib.admin',
 )
+
 THIRD_PARTY_APPS = ()
 
 LOCAL_APPS = (
@@ -158,3 +165,7 @@ REST_FRAMEWORK = {
 }
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_AUTHENTICATION_METHOD =  'email'
+ACCOUNT_EMAIL_REQUIRED = True
